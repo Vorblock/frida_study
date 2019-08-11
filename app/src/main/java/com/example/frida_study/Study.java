@@ -4,7 +4,7 @@ import android.util.Log;
 
 public class Study extends Book{
 
-    private static final String TAG = "Study";
+    private static final String TAG = "FirdaStudy";
     public static String hook = "Hello,frida!";
     private int age;
     //

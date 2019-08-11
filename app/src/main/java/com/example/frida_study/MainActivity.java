@@ -3,6 +3,7 @@ package com.example.frida_study;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     static {
         System.loadLibrary("native-lib");
     }
+    final static String TAG = "FirdaStudy";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Study study = new Study("NONO",100);
                 study.show();
+
+                Log.d(TAG, "---------------------Naitve分割线----------------------");
+                n_fun("YES");
+                study.native_fun();
+                study.native_str("OKOK");
+                study.setage(10);
+
             }
         });
 
